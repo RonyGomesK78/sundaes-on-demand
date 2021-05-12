@@ -18,15 +18,15 @@ const Options = ({ optionType }) => {
     }, [optionType]);
 
     //TODO: replace 'null' with ToppingOption when available
-    const ItemComponent = optionType === 'scope' ? ScoopOption : null;
+    const ItemComponent = optionType === 'scoops' ? ScoopOption : null;
 
-    const optionItems = items.map( item => {
+    const optionItems = items.map( item => (
         <ItemComponent 
             key={item.name}
             name={item.name}
-            imagePath={item.ImagePath} 
+            imagePath={item.imagePath} 
         />
-    })
+    ));
     return(
         <Row>{optionItems}</Row>
     );
