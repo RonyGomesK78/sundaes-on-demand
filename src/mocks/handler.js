@@ -10,7 +10,7 @@ export const handlers = [
     );
   }),
 
-  rest.get("http://localhost:3030/topping", (req, res, ctx) => {
+  rest.get("http://localhost:3030/toppings", (req, res, ctx) => {
     return res(
       ctx.json([
         { name: "Cherries", imagePath: "/images/cherries.png" },
@@ -19,5 +19,5 @@ export const handlers = [
       ])
     );
   }),
-  
+
 ];
