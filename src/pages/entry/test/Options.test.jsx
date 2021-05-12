@@ -14,3 +14,12 @@ test('displays image for each scoop option from server', () => {
     expect(altText).toEqual(['Chocolate scoop', 'Vanila scoop']);
     
 });
+
+test('display image for each tooping option from server', () => {
+    render(<Options  optionType="topping" />);
+
+    const toppingImage = screen.getAllByRole('img', { name: /topping$/i});
+    expect(toppingImage).toHaveLength(3);
+
+    const 
+})
