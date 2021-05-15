@@ -10,7 +10,7 @@ import { useOrderDetails } from "../../contexts/OrderDetails";
 const Options = ({ optionType }) => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(false);
-  const [OrderDetails, updateItemCount] = useOrderDetails;
+  const [orderDetails, updateItemCount] = useOrderDetails();
 
   //optionType is 'scope' or 'toppings'
   useEffect(() => {
