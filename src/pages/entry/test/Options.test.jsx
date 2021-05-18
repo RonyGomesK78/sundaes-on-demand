@@ -1,6 +1,10 @@
 import { render, screen } from "../../../test-utils/testing-library-utils";
 import Options from "../Options";
+<<<<<<< HEAD
 import { OrderDetailsProvider } from "../../../contexts/OrderDetails";
+=======
+import { OrderDetailsProvider } from '../../../contexts/OrderDetails';
+>>>>>>> 9d2b0800531120b30ffadc1a2c766bf42036505b
 
 test("displays image for each scoop option from server", async () => {
   render(<Options optionType="scoops" />);

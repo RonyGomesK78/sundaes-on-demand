@@ -1,7 +1,11 @@
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+<<<<<<< HEAD
 import Row from "react-bootstrap/Row";
 
+=======
+import Row from 'react-bootstrap/Row';
+>>>>>>> 9d2b0800531120b30ffadc1a2c766bf42036505b
 const ScoopOption = ({ name, imagePath, updateItemCount }) => {
 
   const handleChange = (event) => {
