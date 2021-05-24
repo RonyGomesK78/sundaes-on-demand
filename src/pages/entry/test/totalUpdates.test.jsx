@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import { render, screen } from "../../../test-utils/testing-library-utils";
 import userEvent from "@testing-library/user-event";
 import Options from "../Options";
 import { OrderDetailsProvider } from "../../../contexts/OrderDetails";
 import OrderEntry from "../OrderEntry";
-=======
-import { render, screen } from '../../../test-utils/testing-library-utils';
-import userEvent from '@testing-library/user-event';
-import Options from '../Options';
-import { OrderDetailsProvider } from '../../../contexts/OrderDetails';
->>>>>>> 9d2b0800531120b30ffadc1a2c766bf42036505b
 
 test("update scoop subtotal when scoops change", async () => {
   render(<Options optionType="scoops" />);
@@ -86,6 +79,7 @@ describe("grand total", () => {
   });
 
   test("grand total updates properly if topping is added first", async () => {
+    
     render(<OrderEntry />);
 
     // add cherries and check grand total

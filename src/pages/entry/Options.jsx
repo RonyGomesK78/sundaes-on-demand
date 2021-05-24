@@ -10,11 +10,7 @@ import { formatCurrency } from '../../utilities/index'
 const Options = ({ optionType }) => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(false);
-<<<<<<< HEAD
-  const [OrderDetails, updateItemCount] = useOrderDetails();
-=======
   const [orderDetails, updateItemCount] = useOrderDetails();
->>>>>>> 9d2b0800531120b30ffadc1a2c766bf42036505b
 
   //optionType is 'scope' or 'toppings'
   useEffect(() => {
@@ -47,7 +43,7 @@ const Options = ({ optionType }) => {
       <h2>{title}</h2>
       <p>{formatCurrency(pricePerItem[optionType])} each</p>
       <p>
-        {title} total: {OrderDetails.totals[optionType]}
+        {title} total: {orderDetails.totals[optionType]}
       </p>
       <Row>{optionItems}</Row>
     </>

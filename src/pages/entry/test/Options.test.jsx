@@ -1,10 +1,6 @@
 import { render, screen } from "../../../test-utils/testing-library-utils";
 import Options from "../Options";
-<<<<<<< HEAD
-import { OrderDetailsProvider } from "../../../contexts/OrderDetails";
-=======
-import { OrderDetailsProvider } from '../../../contexts/OrderDetails';
->>>>>>> 9d2b0800531120b30ffadc1a2c766bf42036505b
+import userEvent from "@testing-library/user-event";
 
 test("displays image for each scoop option from server", async () => {
   render(<Options optionType="scoops" />);
@@ -27,4 +23,17 @@ test("display image for each toppings option from server", async () => {
 
   const altText = toppingImage.map((element) => element.alt);
   expect(altText).toEqual(["Cherries topping", "M&Ms topping", "Hot fudge topping"]);
+});
+
+test('dont update total if scoops input is invalid', async () => {
+  render(<Options optionType='scoops'/>);
+
+  const vanillaInput = await screen.findByRole('spinbutton', {
+    name: 'Vanilla',
+  });
+  userEvent.clear(vanillaInput);
+  userEvent.type(vanillaInput, '-1');
+
+  const scoopsSubtotal = screen.getByText('Scoops total: $0.00');
+  expect(scoopsSubtotal).toBeInTheDocument();
 });
